@@ -1,0 +1,98 @@
+#! /usr/bin/vvp
+:ivl_version "10.3 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55dd39979060 .scope module, "full_adder_by_half_adder_tb" "full_adder_by_half_adder_tb" 2 1;
+ .timescale 0 0;
+v0x55dd399c6070_0 .var "a", 0 0;
+v0x55dd399c6160_0 .var "b", 0 0;
+v0x55dd399c6270_0 .net "carry", 0 0, L_0x55dd399c68d0;  1 drivers
+v0x55dd399c6310_0 .var "cin", 0 0;
+v0x55dd399c6400_0 .net "sum", 0 0, L_0x55dd399c6670;  1 drivers
+S_0x55dd399791e0 .scope module, "f1" "full_adder_by_half_adder" 2 10, 3 1 0, S_0x55dd39979060;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /INPUT 1 "cin"
+    .port_info 3 /OUTPUT 1 "sum"
+    .port_info 4 /OUTPUT 1 "carry"
+L_0x55dd399c68d0 .functor OR 1, L_0x55dd399c65b0, L_0x55dd399c67b0, C4<0>, C4<0>;
+v0x55dd399c59c0_0 .net "a", 0 0, v0x55dd399c6070_0;  1 drivers
+v0x55dd399c5a80_0 .net "b", 0 0, v0x55dd399c6160_0;  1 drivers
+v0x55dd399c5b50_0 .net "c1", 0 0, L_0x55dd399c65b0;  1 drivers
+v0x55dd399c5c50_0 .net "c2", 0 0, L_0x55dd399c67b0;  1 drivers
+v0x55dd399c5d20_0 .net "carry", 0 0, L_0x55dd399c68d0;  alias, 1 drivers
+v0x55dd399c5e10_0 .net "cin", 0 0, v0x55dd399c6310_0;  1 drivers
+v0x55dd399c5eb0_0 .net "s1", 0 0, L_0x55dd399c6540;  1 drivers
+v0x55dd399c5fa0_0 .net "sum", 0 0, L_0x55dd399c6670;  alias, 1 drivers
+S_0x55dd399b2860 .scope module, "h1" "half_adder" 3 11, 4 1 0, S_0x55dd399791e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "S"
+    .port_info 3 /OUTPUT 1 "C"
+L_0x55dd399c6540 .functor XOR 1, v0x55dd399c6070_0, v0x55dd399c6160_0, C4<0>, C4<0>;
+L_0x55dd399c65b0 .functor AND 1, v0x55dd399c6070_0, v0x55dd399c6160_0, C4<1>, C4<1>;
+v0x55dd399b2a30_0 .net "C", 0 0, L_0x55dd399c65b0;  alias, 1 drivers
+v0x55dd399c51b0_0 .net "S", 0 0, L_0x55dd399c6540;  alias, 1 drivers
+v0x55dd399c5270_0 .net "a", 0 0, v0x55dd399c6070_0;  alias, 1 drivers
+v0x55dd399c5310_0 .net "b", 0 0, v0x55dd399c6160_0;  alias, 1 drivers
+S_0x55dd399c5450 .scope module, "h2" "half_adder" 3 13, 4 1 0, S_0x55dd399791e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a"
+    .port_info 1 /INPUT 1 "b"
+    .port_info 2 /OUTPUT 1 "S"
+    .port_info 3 /OUTPUT 1 "C"
+L_0x55dd399c6670 .functor XOR 1, L_0x55dd399c6540, v0x55dd399c6310_0, C4<0>, C4<0>;
+L_0x55dd399c67b0 .functor AND 1, L_0x55dd399c6540, v0x55dd399c6310_0, C4<1>, C4<1>;
+v0x55dd399c5640_0 .net "C", 0 0, L_0x55dd399c67b0;  alias, 1 drivers
+v0x55dd399c5700_0 .net "S", 0 0, L_0x55dd399c6670;  alias, 1 drivers
+v0x55dd399c57c0_0 .net "a", 0 0, L_0x55dd399c6540;  alias, 1 drivers
+v0x55dd399c5890_0 .net "b", 0 0, v0x55dd399c6310_0;  alias, 1 drivers
+    .scope S_0x55dd39979060;
+T_0 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55dd399c6070_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55dd399c6160_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55dd399c6310_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55dd399c6070_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55dd399c6160_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55dd399c6310_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55dd399c6070_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55dd399c6160_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55dd399c6310_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x55dd39979060;
+T_1 ;
+    %delay 11, 0;
+    %vpi_call 2 28 "$display", "a : %0d , b : %0d , cin : %0d , sum : %0d , carry : %0d ", v0x55dd399c6070_0, v0x55dd399c6160_0, v0x55dd399c6310_0, v0x55dd399c6400_0, v0x55dd399c6270_0 {0 0 0};
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x55dd39979060;
+T_2 ;
+    %delay 50, 0;
+    %vpi_call 2 31 "$finish" {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "full_adder_by_half_adder_tb.v";
+    "full_adder_by_half_adder.v";
+    "half_adder.v";
