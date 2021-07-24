@@ -1,2 +1,2 @@
 #!/bin/bash
-iverilog -o run counter_up_down_tb.v counter_up_down.v && vvp run
+iverilog -o run rca_pipelined_tb.v rca_pipelined.v full_adder.v && vvp run

@@ -19,6 +19,7 @@ module right_left_shift_reg(
             end 
         else 
             begin 
+
                 if (pl ==1 ) 
                     begin 
                         reg_bits =din;
