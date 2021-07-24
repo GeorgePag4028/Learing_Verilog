@@ -27,7 +27,7 @@ parameter clock_period = 10;
       #(clock_period) di = i;
     end
     #10 we = 0;
-     addr = 3'b000;
+    #10 addr = 3'b000;
     #10 addr = 3'b001;
     #10 addr = 3'b010;
     #10 addr = 3'b011;
@@ -37,7 +37,7 @@ parameter clock_period = 10;
     #10 addr = 3'b111;
   end 
   always 
-    #10 $display("This is do:%0d ,di: %0d,addr = 0x%0h,we = 0b%0b",do,di,addr,we);
+    #10 $display("This is do:%0d ,di: %0d,addr = 0x%0h",do,di,addr);
   always 
     #(clock_period/2) clock = !clock;
 

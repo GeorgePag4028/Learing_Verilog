@@ -28,7 +28,9 @@ module ram #(parameter data_width =8)
             ram[1] <= ram[0];
             ram[0] <= di;
             do <= di;
+            $display("ram[0]:0b%b ram[1]:0b%b ram[2]:0b%b ram[3]:0b%b \nram[4]:0b%b ram[5]:0b%b ram[6]:0b%b ram[7]:0b%b",ram[0],ram[1],ram[2],ram[3],ram[4],ram[5],ram[6],ram[7]); 
         end else 
+            $display("ram[0]:0b%b ram[1]:0b%b ram[2]:0b%b ram[3]:0b%b \nram[4]:0b%b ram[5]:0b%b ram[6]:0b%b ram[7]:0b%b",ram[0],ram[1],ram[2],ram[3],ram[4],ram[5],ram[6],ram[7]); 
           do <= ram[addr];
      end 
   end
