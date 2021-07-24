@@ -18,10 +18,10 @@ This project can be runned on Linux or Mac OS X with icarus-verilog
 
 To install icarus-verilog : 
 ```bash
-    $ sudo apt-get install verilog
+$ sudo apt-get install verilog
 ```
 ```bash
-    % brew install icarus-verilog
+% brew install icarus-verilog
 
 ```
 On this website : https://iverilog.fandom.com/wiki/Installation_Guide
@@ -29,7 +29,7 @@ On this website : https://iverilog.fandom.com/wiki/Installation_Guide
 Choose the module : 
 
 ```bash
-    ./run.sh
+./run.sh
 ```
     
 ## Authors
