@@ -7,7 +7,6 @@ module rom #(parameter data_width =8)
     output reg[data_width-1:0]rom_out
   );
 
-  integer i;
   always@(posedge(clock)) begin 
     if (en == 1) begin 
         case(addr)
@@ -21,6 +20,6 @@ module rom #(parameter data_width =8)
           3'b111:rom_out <= 8'b00001000;
         endcase
      end
-      //$display("rom[0]:0b%b rom[1]:0b%b rom[2]:0b%b rom[3]:0b%b \nrom[4]:0b%b rom[5]:0b%b rom[6]:0b%b rom[7]:0b%b",rom[0],rom[1],rom[2],rom[3],rom[4],rom[5],rom[6],rom[7]); 
+     // $display("rom[0]:0b%b rom[1]:0b%b rom[2]:0b%b rom[3]:0b%b \nrom[4]:0b%b rom[5]:0b%b rom[6]:0b%b rom[7]:0b%b",rom[0],rom[1],rom[2],rom[3],rom[4],rom[5],rom[6],rom[7]); 
   end
 endmodule
