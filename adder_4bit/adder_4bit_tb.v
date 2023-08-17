@@ -19,10 +19,10 @@ module adder_4bit_tb;
         c_in<= 0;
 
         for ( i =0;i<5 ;i++) begin 
-          #10 a <= 1;
-              b <= 1;
+          #10 a <= i;
+              b <= i;
               c_in <= 0;
-              $display("a= 0x%d,b=0x%d,c_in= 0x%d,c_out= 0x%d,sum=0x%d",a,b,c_in,c_out,sum);
+              $display("Time=%5dt, a= 0x%04d,b=0x%04d,c_in= 0x%d,c_out= 0x%d,sum=0x%04d",$time,a,b,c_in,c_out,sum);
         end 
       end 
 endmodule

@@ -3,12 +3,12 @@
  (
   input [3:0] a , 
   input [3:0] b, 
-  input c_in ,
-  output reg  c_out ,
+  input c ,
+  output reg cout ,
   output reg [3:0] sum
  ) ;
 
- always @ (a , b , c_in) begin 
-   {c_out,sum} = a + b +c_in;
+ always @ (a , b) begin 
+   {cout,sum} = a + b;
 end 
 endmodule

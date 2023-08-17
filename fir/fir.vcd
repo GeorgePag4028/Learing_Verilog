@@ -1,0 +1,363 @@
+$date
+	Fri Aug 18 00:35:50 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module fir_tb $end
+$var wire 19 ! y [18:0] $end
+$var wire 1 " valid_out $end
+$var reg 1 # clock $end
+$var reg 1 $ reset $end
+$var reg 1 % valid_in $end
+$var reg 8 & x [7:0] $end
+$scope module dut $end
+$var wire 1 # clock $end
+$var wire 1 $ reset $end
+$var wire 1 % valid_in $end
+$var wire 8 ' x [7:0] $end
+$var wire 19 ( y [18:0] $end
+$var wire 1 ) we_control_unit $end
+$var wire 1 " valid_out $end
+$var wire 8 * rom_out_rom [7:0] $end
+$var wire 3 + rom_address_control_unit [2:0] $end
+$var wire 8 , ram_out_ram [7:0] $end
+$var wire 3 - ram_address_control_unit [2:0] $end
+$var wire 1 . mac_init_control_unit $end
+$var wire 1 / en_control_unit $end
+$var reg 1 0 mac_init_mac $end
+$scope module cudut $end
+$var wire 1 # clock $end
+$var wire 1 $ reset $end
+$var wire 1 % valid_in $end
+$var reg 3 1 counter [2:0] $end
+$var reg 1 / en $end
+$var reg 1 . mac_init $end
+$var reg 3 2 ram_address [2:0] $end
+$var reg 3 3 rom_address [2:0] $end
+$var reg 1 ) we $end
+$upscope $end
+$scope module macdut $end
+$var wire 1 # clock $end
+$var wire 1 0 mac_init $end
+$var wire 1 $ reset $end
+$var wire 19 4 y [18:0] $end
+$var wire 8 5 rom_out [7:0] $end
+$var wire 8 6 ram_out [7:0] $end
+$var parameter 32 7 data_width $end
+$var reg 3 8 counter [2:0] $end
+$var reg 1 " valid_out $end
+$var reg 19 9 y_temp [18:0] $end
+$upscope $end
+$scope module ramdut $end
+$var wire 3 : addr [2:0] $end
+$var wire 1 # clock $end
+$var wire 8 ; di [7:0] $end
+$var wire 1 / en $end
+$var wire 1 $ reset $end
+$var wire 1 ) we $end
+$var parameter 32 < data_width $end
+$var reg 8 = dio [7:0] $end
+$scope begin $ivl_for_loop1 $end
+$var integer 32 > i [31:0] $end
+$upscope $end
+$scope begin $ivl_for_loop2 $end
+$var integer 32 ? i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module romdut $end
+$var wire 3 @ addr [2:0] $end
+$var wire 1 # clock $end
+$var wire 1 / en $end
+$var wire 8 A rdata [7:0] $end
+$var parameter 32 B coeff_width $end
+$var reg 8 C rom_out [7:0] $end
+$upscope $end
+$upscope $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 D i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 B
+b1000 <
+b1000 7
+$end
+#0
+$dumpvars
+b0 D
+bx C
+bx A
+bx @
+b0 ?
+b1000 >
+bx =
+bx ;
+bx :
+bx 9
+b0 8
+bx 6
+bx 5
+bx 4
+bx 3
+bx 2
+b0 1
+x0
+x/
+x.
+bx -
+bx ,
+bx +
+bx *
+x)
+bx (
+bx '
+bx &
+x%
+1$
+1#
+0"
+bx !
+$end
+#5
+0#
+#10
+b1 8
+1#
+0$
+#15
+0#
+#20
+b1 1
+b0 -
+b0 2
+b0 :
+b1000 A
+b0 +
+b0 3
+b0 @
+1.
+1)
+b10 8
+1/
+1#
+b1 D
+b0 &
+b0 '
+b0 ;
+1%
+#25
+0#
+#30
+b1 ,
+b1 6
+b1 =
+b11 8
+b10 1
+b1 -
+b1 2
+b1 :
+b111 A
+b1 +
+b1 3
+b1 @
+0)
+0.
+10
+b1000 *
+b1000 5
+b1000 C
+b111 ?
+1#
+b10 D
+b1 &
+b1 '
+b1 ;
+#35
+0#
+#40
+b11 1
+b10 -
+b10 2
+b10 :
+b110 A
+b10 +
+b10 3
+b10 @
+b0 8
+b0 ,
+b0 6
+b0 =
+b111 *
+b111 5
+b111 C
+b1000 !
+b1000 (
+b1000 4
+b1000 9
+00
+1#
+b11 D
+b10 &
+b10 '
+b10 ;
+#45
+0#
+#50
+b1 8
+b100 1
+b11 -
+b11 2
+b11 :
+b101 A
+b11 +
+b11 3
+b11 @
+b110 *
+b110 5
+b110 C
+1#
+b100 D
+b11 &
+b11 '
+b11 ;
+#55
+0#
+#60
+b101 1
+b100 -
+b100 2
+b100 :
+b100 A
+b100 +
+b100 3
+b100 @
+b10 8
+b101 *
+b101 5
+b101 C
+1#
+b101 D
+b100 &
+b100 '
+b100 ;
+#65
+0#
+#70
+b11 8
+b110 1
+b101 -
+b101 2
+b101 :
+b11 A
+b101 +
+b101 3
+b101 @
+b100 *
+b100 5
+b100 C
+1#
+b110 D
+b101 &
+b101 '
+b101 ;
+#75
+0#
+#80
+b111 1
+b110 -
+b110 2
+b110 :
+b10 A
+b110 +
+b110 3
+b110 @
+b100 8
+b11 *
+b11 5
+b11 C
+1#
+b111 D
+b110 &
+b110 '
+b110 ;
+#85
+0#
+#90
+b101 8
+b0 1
+b111 -
+b111 2
+b111 :
+b1 A
+b111 +
+b111 3
+b111 @
+b10 *
+b10 5
+b10 C
+0%
+1#
+b1000 D
+b111 &
+b111 '
+b111 ;
+#95
+0#
+#100
+0/
+1.
+b110 8
+b1 *
+b1 5
+b1 C
+1#
+#105
+0#
+#110
+1"
+b0 8
+10
+1#
+#115
+0#
+#120
+0"
+b0 !
+b0 (
+b0 4
+b0 9
+1#
+#125
+0#
+#130
+1#
+#135
+0#
+#140
+1#
+#145
+0#
+#150
+1#
+#155
+0#
+#160
+1#
+#165
+0#
+#170
+1#
+#175
+0#
+#180
+1#
+#185
+0#
+#190
+1#
