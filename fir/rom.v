@@ -20,5 +20,6 @@ end
 assign rdata = rom[addr];
 always@(posedge clock) begin 
   if (en == 1) rom_out <= rdata;
+  else rom_out <= 0;
 end 
 endmodule

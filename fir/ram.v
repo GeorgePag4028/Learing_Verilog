@@ -21,8 +21,10 @@ initial begin
 end
 
 always @ (posedge clock or posedge reset) begin
-  if (reset == 1) 
+  if (reset == 1) begin 
     for(int i=0;i<data_width;i++) ram[i] = 0;
+    dio <= 0;
+  end
   else begin 
     if (en == 1) begin 
       if (we == 1) begin

@@ -14,12 +14,15 @@ initial begin
   $dumpvars(0, fir_tb);
   reset = 1;
   clock = 1;
-  #10 reset =0;
+  valid_in = 0;
+  x = 0;
+  #5 reset =0;
 
-  for(int i=0;i<8;i++) begin
+  for(int i=1;i<9;i++) begin
     #10 valid_in = 1;
     x = i; 
   end
+  // #10
   valid_in <=0;
   #100 $finish;
 end 

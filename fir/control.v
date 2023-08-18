@@ -13,8 +13,15 @@ reg [2:0] counter;
 initial counter =0 ; 
 
 always @ (posedge clock or posedge reset) begin
-  if (reset == 1) 
+  if (reset == 1) begin
     counter <= 0;
+    rom_address <= 0;
+    ram_address <= 0;
+    mac_init <= 0;
+    we <= 0;
+    en <= 0;
+  end
+  
   else begin
     if (counter == 0 && valid_in == 1 ) begin
       en = 1;
@@ -32,7 +39,7 @@ always @ (posedge clock or posedge reset) begin
     else if (counter != 0) begin 
       en <= 1;
       mac_init <= 0;
-      we <= 0;
+      we <= 1;
       rom_address <= counter;
       ram_address <= counter;
       counter <= counter + 1;
